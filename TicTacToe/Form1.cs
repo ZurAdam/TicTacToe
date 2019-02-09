@@ -33,12 +33,6 @@ namespace TicTacToe
 
         }
 
-
-        private void button32_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
@@ -154,6 +148,16 @@ namespace TicTacToe
         private void NewGame(object sender, EventArgs e)
         {
 
+        }
+
+        private void Options(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Exit(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

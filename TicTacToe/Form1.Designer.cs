@@ -397,7 +397,7 @@
             this.button32.TabIndex = 2;
             this.button32.Text = "Exit";
             this.button32.UseVisualStyleBackColor = true;
-            this.button32.Click += new System.EventHandler(this.button32_Click);
+            this.button32.Click += new System.EventHandler(this.Exit);
             // 
             // button31
             // 
@@ -410,7 +410,7 @@
             this.button31.TabIndex = 1;
             this.button31.Text = "Options";
             this.button31.UseVisualStyleBackColor = true;
-            this.button31.Click += new System.EventHandler(this.button32_Click);
+            this.button31.Click += new System.EventHandler(this.Options);
             // 
             // button26
             // 
