@@ -116,7 +116,7 @@ namespace TicTacToe
                     return true;
                 else if ((box7.Text == box12.Text) && (box12.Text == box17.Text) && (box17.Text == box22.Text) && box7.Text != "")
                     return true;
-                else if ((box3.Text == box8.Text) && (box13.Text == box18.Text) && (box18.Text == box23.Text) && box3.Text != "")
+                else if ((box3.Text == box8.Text) && (box8.Text == box18.Text) && (box18.Text == box23.Text) && box3.Text != "")
                     return true;
                 else if ((box8.Text == box13.Text) && (box13.Text == box18.Text) && (box18.Text == box23.Text) && box8.Text != "")
                     return true;
