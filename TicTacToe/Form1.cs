@@ -19,7 +19,7 @@ namespace TicTacToe
 
         char player = 'X';
         public int turns = 0;
-        
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -116,7 +116,7 @@ namespace TicTacToe
                     return true;
                 else if ((box7.Text == box12.Text) && (box12.Text == box17.Text) && (box17.Text == box22.Text) && box7.Text != "")
                     return true;
-                else if ((box3.Text == box8.Text) && (box8.Text == box18.Text) && (box18.Text == box23.Text) && box3.Text != "")
+                else if ((box3.Text == box8.Text) && (box8.Text == box13.Text) && (box13.Text == box18.Text) && box3.Text != "")
                     return true;
                 else if ((box8.Text == box13.Text) && (box13.Text == box18.Text) && (box18.Text == box23.Text) && box8.Text != "")
                     return true;
@@ -159,7 +159,7 @@ namespace TicTacToe
             EnableBox();
             turns = 0;
             //update
-            
+
         }
 
         private void Options(object sender, EventArgs e)
@@ -170,6 +170,10 @@ namespace TicTacToe
         private void Exit(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void RestartGame_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
 
         void DisableBox()
@@ -200,7 +204,7 @@ namespace TicTacToe
         }
 
 
-        
+
         public void display()
         {
             if (turns % 2 != 1)
