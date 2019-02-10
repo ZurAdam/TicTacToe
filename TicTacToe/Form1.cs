@@ -36,6 +36,11 @@ namespace TicTacToe
 
         }
 
+        private void DisplayPlayers_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         private void buttonClick(object sender, EventArgs e)
@@ -56,6 +61,8 @@ namespace TicTacToe
                     player++;
                     turns++;
                 }
+                display();
+
                 if (checkDraw() == true)
                 {
                     MessageBox.Show("Remis");
@@ -190,6 +197,20 @@ namespace TicTacToe
             box11.Text = box12.Text = box13.Text = box14.Text = box15.Text =
             box16.Text = box17.Text = box18.Text = box19.Text = box20.Text =
             box21.Text = box22.Text = box23.Text = box24.Text = box25.Text = "";
+        }
+
+
+        
+        public void display()
+        {
+            if (turns % 2 != 1)
+            {
+                DisplayPlayers.Text = "X";
+            }
+            else
+            {
+                DisplayPlayers.Text = "O";
+            }
         }
 
     }

@@ -70,6 +70,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.DisplayPlayers = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +83,7 @@
             this.box1.Name = "box1";
             this.box1.Size = new System.Drawing.Size(75, 75);
             this.box1.TabIndex = 0;
+            this.box1.UseCompatibleTextRendering = true;
             this.box1.UseVisualStyleBackColor = false;
             this.box1.Click += new System.EventHandler(this.buttonClick);
             // 
@@ -556,12 +558,25 @@
             this.label1.TabIndex = 50;
             this.label1.Text = "Aktualny gracz: ";
             // 
+            // DisplayPlayers
+            // 
+            this.DisplayPlayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 55F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.DisplayPlayers.Location = new System.Drawing.Point(525, 0);
+            this.DisplayPlayers.MinimumSize = new System.Drawing.Size(30, 30);
+            this.DisplayPlayers.Name = "DisplayPlayers";
+            this.DisplayPlayers.Size = new System.Drawing.Size(126, 78);
+            this.DisplayPlayers.TabIndex = 51;
+            this.DisplayPlayers.Text = "X";
+            this.DisplayPlayers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DisplayPlayers.Click += new System.EventHandler(this.DisplayPlayers_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(58)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(743, 521);
+            this.Controls.Add(this.DisplayPlayers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel12);
@@ -656,6 +671,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label DisplayPlayers;
     }
 }
 
