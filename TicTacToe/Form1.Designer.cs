@@ -71,7 +71,6 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.DisplayPlayers = new System.Windows.Forms.Label();
-            this.RestartGame = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -379,7 +378,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
-            this.panel1.Controls.Add(this.RestartGame);
             this.panel1.Controls.Add(this.button32);
             this.panel1.Controls.Add(this.button31);
             this.panel1.Controls.Add(this.button26);
@@ -395,7 +393,7 @@
             this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button32.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button32.ForeColor = System.Drawing.Color.White;
-            this.button32.Location = new System.Drawing.Point(0, 401);
+            this.button32.Location = new System.Drawing.Point(0, 349);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(200, 92);
             this.button32.TabIndex = 2;
@@ -408,7 +406,7 @@
             this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button31.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button31.ForeColor = System.Drawing.Color.White;
-            this.button31.Location = new System.Drawing.Point(0, 152);
+            this.button31.Location = new System.Drawing.Point(0, 206);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(200, 92);
             this.button31.TabIndex = 1;
@@ -421,7 +419,7 @@
             this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button26.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button26.ForeColor = System.Drawing.Color.White;
-            this.button26.Location = new System.Drawing.Point(0, 26);
+            this.button26.Location = new System.Drawing.Point(0, 64);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(200, 92);
             this.button26.TabIndex = 0;
@@ -572,19 +570,6 @@
             this.DisplayPlayers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DisplayPlayers.Click += new System.EventHandler(this.DisplayPlayers_Click);
             // 
-            // RestartGame
-            // 
-            this.RestartGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RestartGame.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.RestartGame.ForeColor = System.Drawing.Color.White;
-            this.RestartGame.Location = new System.Drawing.Point(0, 277);
-            this.RestartGame.Name = "RestartGame";
-            this.RestartGame.Size = new System.Drawing.Size(200, 92);
-            this.RestartGame.TabIndex = 3;
-            this.RestartGame.Text = "Restart Game";
-            this.RestartGame.UseVisualStyleBackColor = true;
-            this.RestartGame.Click += new System.EventHandler(this.RestartGame_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -687,7 +672,6 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label DisplayPlayers;
-        private System.Windows.Forms.Button RestartGame;
     }
 }
 

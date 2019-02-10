@@ -171,10 +171,6 @@ namespace TicTacToe
         {
             this.Close();
         }
-        private void RestartGame_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
 
         void DisableBox()
         {
