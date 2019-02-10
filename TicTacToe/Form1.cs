@@ -19,9 +19,7 @@ namespace TicTacToe
 
         char player = 'X';
         public int turns = 0;
-        public int s1 = 0;
-        public int s2 = 0;
-        public int s3 = 0;
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -66,6 +64,8 @@ namespace TicTacToe
                 if (checkWinner() == true)
                 {
                     MessageBox.Show("Wygrana");
+                    DisableBox();
+
                 }
             }
 
@@ -158,6 +158,35 @@ namespace TicTacToe
         private void Exit(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        void DisableBox()
+        {
+            box1.Enabled = false;
+            box2.Enabled = false;
+            box3.Enabled = false;
+            box4.Enabled = false;
+            box5.Enabled = false;
+            box6.Enabled = false;
+            box7.Enabled = false;
+            box8.Enabled = false;
+            box9.Enabled = false;
+            box10.Enabled = false;
+            box11.Enabled = false;
+            box12.Enabled = false;
+            box13.Enabled = false;
+            box14.Enabled = false;
+            box15.Enabled = false;
+            box16.Enabled = false;
+            box17.Enabled = false;
+            box18.Enabled = false;
+            box19.Enabled = false;
+            box20.Enabled = false;
+            box21.Enabled = false;
+            box22.Enabled = false;
+            box23.Enabled = false;
+            box24.Enabled = false;
+            box25.Enabled = false;
         }
     }
 }
