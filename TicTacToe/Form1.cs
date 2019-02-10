@@ -70,7 +70,12 @@ namespace TicTacToe
                 }
                 if (checkWinner() == true)
                 {
-                    MessageBox.Show("Wygrana");
+                    if (button.Text == "X")
+                    {
+                        MessageBox.Show("Wygrana gracza X");
+                    }
+                    else
+                        MessageBox.Show("Wygrana gracza O");
                     DisableBox();
 
                 }
