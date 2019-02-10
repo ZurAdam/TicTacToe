@@ -148,6 +148,11 @@ namespace TicTacToe
         private void NewGame(object sender, EventArgs e)
         {
 
+            ResetBoxes();
+            EnableBox();
+            turns = 0;
+            //update
+            
         }
 
         private void Options(object sender, EventArgs e)
@@ -162,31 +167,30 @@ namespace TicTacToe
 
         void DisableBox()
         {
-            box1.Enabled = false;
-            box2.Enabled = false;
-            box3.Enabled = false;
-            box4.Enabled = false;
-            box5.Enabled = false;
-            box6.Enabled = false;
-            box7.Enabled = false;
-            box8.Enabled = false;
-            box9.Enabled = false;
-            box10.Enabled = false;
-            box11.Enabled = false;
-            box12.Enabled = false;
-            box13.Enabled = false;
-            box14.Enabled = false;
-            box15.Enabled = false;
-            box16.Enabled = false;
-            box17.Enabled = false;
-            box18.Enabled = false;
-            box19.Enabled = false;
-            box20.Enabled = false;
-            box21.Enabled = false;
-            box22.Enabled = false;
-            box23.Enabled = false;
-            box24.Enabled = false;
-            box25.Enabled = false;
+            box1.Enabled = box2.Enabled = box3.Enabled = box4.Enabled = box5.Enabled =
+            box6.Enabled = box7.Enabled = box8.Enabled = box9.Enabled = box10.Enabled =
+            box11.Enabled = box12.Enabled = box13.Enabled = box14.Enabled = box15.Enabled =
+            box16.Enabled = box17.Enabled = box18.Enabled = box19.Enabled = box20.Enabled =
+            box21.Enabled = box22.Enabled = box23.Enabled = box24.Enabled = box25.Enabled = false;
         }
+
+        void EnableBox()
+        {
+            box1.Enabled = box2.Enabled = box3.Enabled = box4.Enabled = box5.Enabled =
+            box6.Enabled = box7.Enabled = box8.Enabled = box9.Enabled = box10.Enabled =
+            box11.Enabled = box12.Enabled = box13.Enabled = box14.Enabled = box15.Enabled =
+            box16.Enabled = box17.Enabled = box18.Enabled = box19.Enabled = box20.Enabled =
+            box21.Enabled = box22.Enabled = box23.Enabled = box24.Enabled = box25.Enabled = true;
+        }
+
+        void ResetBoxes()
+        {
+            box1.Text = box2.Text = box3.Text = box4.Text = box5.Text =
+            box6.Text = box7.Text = box8.Text = box9.Text = box10.Text =
+            box11.Text = box12.Text = box13.Text = box14.Text = box15.Text =
+            box16.Text = box17.Text = box18.Text = box19.Text = box20.Text =
+            box21.Text = box22.Text = box23.Text = box24.Text = box25.Text = "";
+        }
+
     }
 }
