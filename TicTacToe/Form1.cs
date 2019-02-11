@@ -20,6 +20,9 @@ namespace TicTacToe
         char player = 'X';
         public int turns = 0;
 
+        int playerX = 0;
+        int playerO = 0;
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -73,9 +76,15 @@ namespace TicTacToe
                     if (button.Text == "X")
                     {
                         MessageBox.Show("Wygrana gracza X");
+                        playerX++;
+                        playerXscore.Text = playerX.ToString();
                     }
                     else
+                    {
                         MessageBox.Show("Wygrana gracza O");
+                        playerO++;
+                        playerOscore.Text = playerO.ToString();
+                    }
                     DisableBox();
 
                 }
@@ -218,9 +227,6 @@ namespace TicTacToe
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

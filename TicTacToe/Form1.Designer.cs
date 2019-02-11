@@ -71,10 +71,10 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.DisplayPlayers = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.playerXscore = new System.Windows.Forms.Label();
             this.playerOscore = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -574,20 +574,6 @@
             this.DisplayPlayers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DisplayPlayers.Click += new System.EventHandler(this.DisplayPlayers_Click);
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(381, 444);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 32);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Gracz X";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
@@ -607,9 +593,9 @@
             this.playerXscore.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.playerXscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.playerXscore.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.playerXscore.Location = new System.Drawing.Point(381, 476);
+            this.playerXscore.Location = new System.Drawing.Point(383, 476);
             this.playerXscore.Name = "playerXscore";
-            this.playerXscore.Size = new System.Drawing.Size(86, 36);
+            this.playerXscore.Size = new System.Drawing.Size(84, 36);
             this.playerXscore.TabIndex = 54;
             this.playerXscore.Text = "0";
             this.playerXscore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -627,16 +613,29 @@
             this.playerOscore.Text = "0";
             this.playerOscore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(383, 444);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 32);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Gracz X";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(58)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(743, 521);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.playerOscore);
             this.Controls.Add(this.playerXscore);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.DisplayPlayers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel13);
@@ -733,10 +732,10 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label DisplayPlayers;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label playerXscore;
         private System.Windows.Forms.Label playerOscore;
+        private System.Windows.Forms.Label label2;
     }
 }
 
