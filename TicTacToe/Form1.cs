@@ -106,7 +106,7 @@ namespace TicTacToe
                     return true;
                 else if ((box16.Text == box17.Text) && (box17.Text == box18.Text) && (box18.Text == box19.Text) && box16.Text != "")
                     return true;
-                else if ((box17.Text == box18.Text) && (box19.Text == box20.Text) && (box20.Text == box21.Text) && box17.Text != "")
+                else if ((box17.Text == box18.Text) && (box18.Text == box19.Text) && (box19.Text == box20.Text) && box17.Text != "")
                     return true;
                 else if ((box21.Text == box22.Text) && (box22.Text == box23.Text) && (box23.Text == box24.Text) && box21.Text != "")
                     return true;
@@ -218,5 +218,9 @@ namespace TicTacToe
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
