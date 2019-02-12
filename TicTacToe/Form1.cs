@@ -23,6 +23,8 @@ namespace TicTacToe
         int playerX = 0;
         int playerO = 0;
 
+        bool isMenuPanelOpen = false;
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -249,80 +251,109 @@ namespace TicTacToe
                 else
                     return false;
 
+            }
+        }
+
+        private void NewGame(object sender, EventArgs e)
+        {
+
+            ResetBoxes();
+            EnableBox();
+            turns = 0;
+            //update
+
+                    }
+
+        private void Options(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Exit(object sender, EventArgs e)
+        {
+        this.Close();
+        }
+
+        void DisableBox()
+        {
+            box1.Enabled = box2.Enabled = box3.Enabled = box4.Enabled = box5.Enabled =
+            box6.Enabled = box7.Enabled = box8.Enabled = box9.Enabled = box10.Enabled =
+            box11.Enabled = box12.Enabled = box13.Enabled = box14.Enabled = box15.Enabled =
+            box16.Enabled = box17.Enabled = box18.Enabled = box19.Enabled = box20.Enabled =
+            box21.Enabled = box22.Enabled = box23.Enabled = box24.Enabled = box25.Enabled = false;
+        }
+
+        void EnableBox()
+        {
+            box1.Enabled = box2.Enabled = box3.Enabled = box4.Enabled = box5.Enabled =
+            box6.Enabled = box7.Enabled = box8.Enabled = box9.Enabled = box10.Enabled =
+            box11.Enabled = box12.Enabled = box13.Enabled = box14.Enabled = box15.Enabled =
+            box16.Enabled = box17.Enabled = box18.Enabled = box19.Enabled = box20.Enabled =
+            box21.Enabled = box22.Enabled = box23.Enabled = box24.Enabled = box25.Enabled = true;
+        }
+
+        void ResetBoxes()
+        {
+            box1.Text = box2.Text = box3.Text = box4.Text = box5.Text =
+            box6.Text = box7.Text = box8.Text = box9.Text = box10.Text =
+            box11.Text = box12.Text = box13.Text = box14.Text = box15.Text =
+            box16.Text = box17.Text = box18.Text = box19.Text = box20.Text =
+            box21.Text = box22.Text = box23.Text = box24.Text = box25.Text = "";
+
+            box1.BackColor = box2.BackColor = box3.BackColor = box4.BackColor = box5.BackColor =
+            box6.BackColor = box7.BackColor = box8.BackColor = box9.BackColor = box10.BackColor =
+            box11.BackColor = box12.BackColor = box13.BackColor = box14.BackColor = box15.BackColor =
+            box16.BackColor = box17.BackColor = box18.BackColor = box19.BackColor = box20.BackColor =
+            box21.BackColor = box22.BackColor = box23.BackColor = box24.BackColor = box25.BackColor = Color.FromArgb(0, 180, 235);
+        }
+
+
+
+        public void display()
+        {
+            if (player % 2 == 0)
+            {
+                DisplayPlayers.Text = "X";
+
+            }
+            else
+            {
+                DisplayPlayers.Text = "O";
+
+            }
+        }
+
+        private void OptionPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Option_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(isMenuPanelOpen)
+            {
+                OptionPanel.Width -= 20;
+                if (OptionPanel.Width == 0)
+                {
+                    timer1.Stop();
+                    isMenuPanelOpen = false;
                 }
+
+            }
+            else if (!isMenuPanelOpen)
+            {
+                OptionPanel.Width += 20;
+                if (OptionPanel.Width == 200)
+                {
+                    timer1.Stop();
+                    isMenuPanelOpen = true;
                 }
-
-                    private void NewGame(object sender, EventArgs e)
-                    {
-
-                        ResetBoxes();
-                        EnableBox();
-                        turns = 0;
-                        //update
-
-                    }
-
-                    private void Options(object sender, EventArgs e)
-                    {
-
-                    }
-
-                    private void Exit(object sender, EventArgs e)
-                    {
-                        this.Close();
-                    }
-
-                    void DisableBox()
-                    {
-                        box1.Enabled = box2.Enabled = box3.Enabled = box4.Enabled = box5.Enabled =
-                        box6.Enabled = box7.Enabled = box8.Enabled = box9.Enabled = box10.Enabled =
-                        box11.Enabled = box12.Enabled = box13.Enabled = box14.Enabled = box15.Enabled =
-                        box16.Enabled = box17.Enabled = box18.Enabled = box19.Enabled = box20.Enabled =
-                        box21.Enabled = box22.Enabled = box23.Enabled = box24.Enabled = box25.Enabled = false;
-                    }
-
-                    void EnableBox()
-                    {
-                        box1.Enabled = box2.Enabled = box3.Enabled = box4.Enabled = box5.Enabled =
-                        box6.Enabled = box7.Enabled = box8.Enabled = box9.Enabled = box10.Enabled =
-                        box11.Enabled = box12.Enabled = box13.Enabled = box14.Enabled = box15.Enabled =
-                        box16.Enabled = box17.Enabled = box18.Enabled = box19.Enabled = box20.Enabled =
-                        box21.Enabled = box22.Enabled = box23.Enabled = box24.Enabled = box25.Enabled = true;
-                    }
-
-                    void ResetBoxes()
-                    {
-                        box1.Text = box2.Text = box3.Text = box4.Text = box5.Text =
-                        box6.Text = box7.Text = box8.Text = box9.Text = box10.Text =
-                        box11.Text = box12.Text = box13.Text = box14.Text = box15.Text =
-                        box16.Text = box17.Text = box18.Text = box19.Text = box20.Text =
-                        box21.Text = box22.Text = box23.Text = box24.Text = box25.Text = "";
-
-                        box1.BackColor = box2.BackColor = box3.BackColor = box4.BackColor = box5.BackColor =
-                         box6.BackColor = box7.BackColor = box8.BackColor = box9.BackColor = box10.BackColor =
-                         box11.BackColor = box12.BackColor = box13.BackColor = box14.BackColor = box15.BackColor =
-                         box16.BackColor = box17.BackColor = box18.BackColor = box19.BackColor = box20.BackColor =
-                         box21.BackColor = box22.BackColor = box23.BackColor = box24.BackColor = box25.BackColor = Color.FromArgb(0, 180, 235);
-                    }
-
-
-
-                    public void display()
-                    {
-
-
-                        if (player % 2 == 0)
-                        {
-                            DisplayPlayers.Text = "X";
-
-                        }
-                        else
-                        {
-                            DisplayPlayers.Text = "O";
-
-                        }
-                    }
-
-
-                }
-                }
+            }
+        }
+    }
+}

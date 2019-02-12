@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.box1 = new System.Windows.Forms.Button();
             this.box6 = new System.Windows.Forms.Button();
             this.box16 = new System.Windows.Forms.Button();
@@ -54,12 +55,13 @@
             this.box10 = new System.Windows.Forms.Button();
             this.box5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Option = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -75,7 +77,14 @@
             this.playerXscore = new System.Windows.Forms.Label();
             this.playerOscore = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.OptionPanel = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.OptionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // box1
@@ -381,8 +390,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
+            this.panel1.Controls.Add(this.Option);
             this.panel1.Controls.Add(this.button32);
-            this.panel1.Controls.Add(this.button31);
             this.panel1.Controls.Add(this.button26);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -390,6 +399,19 @@
             this.panel1.Size = new System.Drawing.Size(200, 521);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Option
+            // 
+            this.Option.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Option.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Option.ForeColor = System.Drawing.Color.White;
+            this.Option.Location = new System.Drawing.Point(0, 214);
+            this.Option.Name = "Option";
+            this.Option.Size = new System.Drawing.Size(200, 92);
+            this.Option.TabIndex = 3;
+            this.Option.Text = "Options";
+            this.Option.UseVisualStyleBackColor = true;
+            this.Option.Click += new System.EventHandler(this.Option_Click);
             // 
             // button32
             // 
@@ -403,19 +425,6 @@
             this.button32.Text = "Exit";
             this.button32.UseVisualStyleBackColor = true;
             this.button32.Click += new System.EventHandler(this.Exit);
-            // 
-            // button31
-            // 
-            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button31.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button31.ForeColor = System.Drawing.Color.White;
-            this.button31.Location = new System.Drawing.Point(0, 206);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(200, 92);
-            this.button31.TabIndex = 1;
-            this.button31.Text = "Options";
-            this.button31.UseVisualStyleBackColor = true;
-            this.button31.Click += new System.EventHandler(this.Options);
             // 
             // button26
             // 
@@ -453,6 +462,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
+            this.panel5.Controls.Add(this.panel14);
             this.panel5.Font = new System.Drawing.Font("Yu Gothic UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.panel5.ForeColor = System.Drawing.Color.Silver;
             this.panel5.Location = new System.Drawing.Point(293, 365);
@@ -460,6 +470,13 @@
             this.panel5.Size = new System.Drawing.Size(357, 5);
             this.panel5.TabIndex = 42;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // panel14
+            // 
+            this.panel14.Location = new System.Drawing.Point(222, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(200, 100);
+            this.panel14.TabIndex = 3;
             // 
             // panel6
             // 
@@ -625,12 +642,68 @@
             this.label2.Text = "Gracz X";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // OptionPanel
+            // 
+            this.OptionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
+            this.OptionPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.OptionPanel.Controls.Add(this.button1);
+            this.OptionPanel.Controls.Add(this.button3);
+            this.OptionPanel.Controls.Add(this.button2);
+            this.OptionPanel.Location = new System.Drawing.Point(200, 214);
+            this.OptionPanel.Name = "OptionPanel";
+            this.OptionPanel.Size = new System.Drawing.Size(0, 180);
+            this.OptionPanel.TabIndex = 3;
+            this.OptionPanel.Click += new System.EventHandler(this.Options);
+            this.OptionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.OptionPanel_Paint);
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(-2, 118);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(200, 60);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Options";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(-2, 58);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 60);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Options";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(-2, -2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 60);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Options";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 20;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(58)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(743, 521);
+            this.Controls.Add(this.OptionPanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.playerOscore);
             this.Controls.Add(this.playerXscore);
@@ -681,6 +754,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.OptionPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -716,7 +791,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
@@ -735,6 +809,13 @@
         private System.Windows.Forms.Label playerXscore;
         private System.Windows.Forms.Label playerOscore;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel OptionPanel;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Option;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
