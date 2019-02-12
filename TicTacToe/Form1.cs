@@ -413,12 +413,34 @@ namespace TicTacToe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Language Polish
+            //Język Polski
+            button26.Text = "Nowa Gra";
+            Option.Text = "Opcje";
+            button32.Text = "Wyjście";
+            label2.Text = "Gracz X";
+            label3.Text = "Gracz O";
+            label1.Text = "Aktualny Gracz:";
+            resetGame.Text = "Zresetuj Stan Gry";
+            language.Text = "Język";
+            button3.Text = "Informacje";
+            button2.Text = "Angielski";
+            button1.Text = "Polski";
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            //Language English
+            //Język Angielski
+            button26.Text = "New Game";
+            Option.Text = "Options";
+            button32.Text = "Exit";
+            label2.Text = "Player X";
+            label3.Text = "Player O";
+            label1.Text = "Current player:";
+            resetGame.Text = "Reset Game";
+            language.Text = "Language";
+            button3.Text = "Info";
+            button2.Text = "English";
+            button1.Text = "Polish";
         }
     }
 
