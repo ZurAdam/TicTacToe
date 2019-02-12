@@ -26,6 +26,7 @@ namespace TicTacToe
         bool isMenu1PanelOpen = false;
         bool isMenu2PanelOpen = false;
 
+        #region 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -45,6 +46,7 @@ namespace TicTacToe
         {
 
         }
+        #endregion
 
         private void buttonClick(object sender, EventArgs e)
         {
@@ -54,17 +56,19 @@ namespace TicTacToe
             {
                 if (player % 2 == 0)
                 {
-                    button.Text = "X";
-                    player++;
+                    button.ForeColor = Color.Gray; // X koloru szarego
+                    button.Text = "X";  //przypisz X do danego boxa
+                    player++;   
                     turns++;
                 }
                 else
                 {
-                    button.Text = "O";
+                    button.ForeColor = Color.White; // O koloru bialego
+                    button.Text = "O";  //przypisz O do danego boxa
                     player++;
                     turns++;
                 }
-                display();
+                display(); // wywolanie zmiany aktualnego gracza
 
                 if (checkDraw() == true)
                 {
@@ -91,7 +95,7 @@ namespace TicTacToe
                 }
             }
 
-            bool checkDraw()
+            bool checkDraw() // sprawdzenie wypełnienia boxów, jesli wszystkie są juz wypełnione ogłasza się remis
             {
                 if (turns == 25)
                     return true;
@@ -99,7 +103,8 @@ namespace TicTacToe
                     return false;
             }
 
-            bool checkWinner()
+            
+            bool checkWinner()  // instrujce warunkowe sprawdzające wygraną, aby wygrać należy posiadac 4 boxy takiego samego tekstu ( X lub O ) oraz muszą znajdowac sie w jednej lini (pionowo, poziono lub na skos) 
             {
                 //poziom
                 if ((box1.Text == box2.Text) && (box2.Text == box3.Text) && (box3.Text == box4.Text) && box1.Text != "")
@@ -249,7 +254,9 @@ namespace TicTacToe
                 else
                     return false;
 
-            }
+            } // instrujce warunkowe sprawdzające wygraną, aby wygrać należy posiadac 4 boxy takiego samego tekstu ( X lub O ) oraz muszą znajdowac sie w jednej lini (pionowo, poziono lub na skos) 
+            
+
         }
 
         private void NewGame(object sender, EventArgs e)
@@ -263,12 +270,12 @@ namespace TicTacToe
 
         private void Options(object sender, EventArgs e)
         {
-
+            //Button opcje
         }
 
         private void Exit(object sender, EventArgs e)
         {
-        this.Close();
+        this.Close(); // zamknij 
         }
 
         void DisableBox()
@@ -277,7 +284,7 @@ namespace TicTacToe
             box6.Enabled = box7.Enabled = box8.Enabled = box9.Enabled = box10.Enabled =
             box11.Enabled = box12.Enabled = box13.Enabled = box14.Enabled = box15.Enabled =
             box16.Enabled = box17.Enabled = box18.Enabled = box19.Enabled = box20.Enabled =
-            box21.Enabled = box22.Enabled = box23.Enabled = box24.Enabled = box25.Enabled = false;
+            box21.Enabled = box22.Enabled = box23.Enabled = box24.Enabled = box25.Enabled = false; // dezaktywowanie boxów 
         }
 
         void EnableBox()
@@ -286,7 +293,8 @@ namespace TicTacToe
             box6.Enabled = box7.Enabled = box8.Enabled = box9.Enabled = box10.Enabled =
             box11.Enabled = box12.Enabled = box13.Enabled = box14.Enabled = box15.Enabled =
             box16.Enabled = box17.Enabled = box18.Enabled = box19.Enabled = box20.Enabled =
-            box21.Enabled = box22.Enabled = box23.Enabled = box24.Enabled = box25.Enabled = true;
+            box21.Enabled = box22.Enabled = box23.Enabled = box24.Enabled = box25.Enabled = true; // aktywowanie boxów 
+
         }
 
         void ResetBoxes()
@@ -295,13 +303,13 @@ namespace TicTacToe
             box6.Text = box7.Text = box8.Text = box9.Text = box10.Text =
             box11.Text = box12.Text = box13.Text = box14.Text = box15.Text =
             box16.Text = box17.Text = box18.Text = box19.Text = box20.Text =
-            box21.Text = box22.Text = box23.Text = box24.Text = box25.Text = "";
+            box21.Text = box22.Text = box23.Text = box24.Text = box25.Text = ""; // wyczyszczenie zapełniomych boxów
 
             box1.BackColor = box2.BackColor = box3.BackColor = box4.BackColor = box5.BackColor =
             box6.BackColor = box7.BackColor = box8.BackColor = box9.BackColor = box10.BackColor =
             box11.BackColor = box12.BackColor = box13.BackColor = box14.BackColor = box15.BackColor =
             box16.BackColor = box17.BackColor = box18.BackColor = box19.BackColor = box20.BackColor =
-            box21.BackColor = box22.BackColor = box23.BackColor = box24.BackColor = box25.BackColor = Color.FromArgb(0, 180, 235);
+            box21.BackColor = box22.BackColor = box23.BackColor = box24.BackColor = box25.BackColor = Color.FromArgb(0, 180, 235); // przypisanie wszystkim boxom koloru startowego
         }
 
 
@@ -310,29 +318,29 @@ namespace TicTacToe
         {
             if (player % 2 == 0)
             {
-                DisplayPlayers.Text = "X";
+                DisplayPlayers.Text = "X"; // zmiana aktualnego gracza
 
             }
             else
             {
-                DisplayPlayers.Text = "O";
+                DisplayPlayers.Text = "O"; // zmiana aktualnego gracza
 
             }
         }
 
         private void OptionPanel_Paint(object sender, PaintEventArgs e)
         {
-
+            //Panel Opcji
         }
 
         private void Option_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            timer1.Start(); // timer menu
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(isMenu1PanelOpen )
+            if(isMenu1PanelOpen) // jesli button zostanie kliknięty w celu zamknięcia, wtedy zsuń menu Language. Tutaj zachodzi również opcja zsunięcia menu Language jesli jest otwarta
             {
                 OptionPanel.Width -= 20;
                 LanguagePanel.Width -= 20;
@@ -344,7 +352,7 @@ namespace TicTacToe
                 }
 
             }
-            else if (!isMenu1PanelOpen)
+            else if (!isMenu1PanelOpen) //  jesli button zostanie kliknięty w celu otwarcia, wtedy rozsuń menu Language
             {
                 OptionPanel.Width += 20;
                 if (OptionPanel.Width == 200)
@@ -363,14 +371,14 @@ namespace TicTacToe
 
         private void language_Click(object sender, EventArgs e)
         {
-            timer2.Start();
+            timer2.Start(); // timer menu
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (isMenu2PanelOpen == true)
             {
 
-                LanguagePanel.Width -= 20;
+                LanguagePanel.Width -= 20; // jesli button zostanie kliknięty w celu zamknięcia, wtedy zsuń menu Language
                 if (LanguagePanel.Width == 0)
                 {
                     timer2.Stop();
@@ -378,7 +386,7 @@ namespace TicTacToe
                 }
 
             }
-            else if (!isMenu2PanelOpen)
+            else if (!isMenu2PanelOpen) //  jesli button zostanie kliknięty w celu otwarcia, wtedy rozsuń menu Language
             {
                 LanguagePanel.Width += 20;
                 if (LanguagePanel.Width == 200)
@@ -389,10 +397,10 @@ namespace TicTacToe
             }
         }
 
-        private void resetGame_Click(object sender, EventArgs e)
+        private void resetGame_Click(object sender, EventArgs e) 
         {
-            playerXscore.Text = "0";
-            playerOscore.Text = "0";
+            playerXscore.Text = "0";  // przypisanie wartości 0 dla wyniku gracza X
+            playerOscore.Text = "0";  // przypisanie wartości 0 dla wyniku gracza O
             playerX = 0;
             playerO = 0;
 
@@ -405,7 +413,12 @@ namespace TicTacToe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            //Language Polish
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            //Language English
         }
     }
 

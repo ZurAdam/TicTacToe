@@ -181,7 +181,7 @@
             this.box12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(235)))));
             this.box12.Font = new System.Drawing.Font("Yu Gothic UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.box12.ForeColor = System.Drawing.Color.Silver;
-            this.box12.Location = new System.Drawing.Point(363, 223);
+            this.box12.Location = new System.Drawing.Point(363, 224);
             this.box12.Name = "box12";
             this.box12.Size = new System.Drawing.Size(75, 75);
             this.box12.TabIndex = 23;
@@ -729,6 +729,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "English";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
