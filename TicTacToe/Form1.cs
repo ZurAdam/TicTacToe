@@ -23,8 +23,8 @@ namespace TicTacToe
         int playerX = 0;
         int playerO = 0;
 
-        bool isMenuPanelOpen = false;
-
+        bool isMenu1PanelOpen = false;
+        bool isMenu2PanelOpen = false;
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -45,8 +45,6 @@ namespace TicTacToe
         {
 
         }
-
-
 
         private void buttonClick(object sender, EventArgs e)
         {
@@ -261,8 +259,7 @@ namespace TicTacToe
             EnableBox();
             turns = 0;
             //update
-
-                    }
+        }
 
         private void Options(object sender, EventArgs e)
         {
@@ -335,25 +332,81 @@ namespace TicTacToe
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(isMenuPanelOpen)
+            if(isMenu1PanelOpen )
             {
                 OptionPanel.Width -= 20;
-                if (OptionPanel.Width == 0)
+                LanguagePanel.Width -= 20;
+                if (OptionPanel.Width == 0 && LanguagePanel.Width == 0)
                 {
                     timer1.Stop();
-                    isMenuPanelOpen = false;
+                    isMenu1PanelOpen = false;
+                    isMenu2PanelOpen = false;
                 }
 
             }
-            else if (!isMenuPanelOpen)
+            else if (!isMenu1PanelOpen)
             {
                 OptionPanel.Width += 20;
                 if (OptionPanel.Width == 200)
                 {
                     timer1.Stop();
-                    isMenuPanelOpen = true;
+                    isMenu1PanelOpen = true;
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Info
+        }
+
+
+        private void language_Click(object sender, EventArgs e)
+        {
+            timer2.Start();
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (isMenu2PanelOpen == true)
+            {
+
+                LanguagePanel.Width -= 20;
+                if (LanguagePanel.Width == 0)
+                {
+                    timer2.Stop();
+                    isMenu2PanelOpen = false;
+                }
+
+            }
+            else if (!isMenu2PanelOpen)
+            {
+                LanguagePanel.Width += 20;
+                if (LanguagePanel.Width == 200)
+                {
+                    timer2.Stop();
+                    isMenu2PanelOpen = true;
+                }
+            }
+        }
+
+        private void resetGame_Click(object sender, EventArgs e)
+        {
+            playerXscore.Text = "0";
+            playerOscore.Text = "0";
+            playerX = 0;
+            playerO = 0;
+
+            ResetBoxes();
+            EnableBox();
+            turns = 0;
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
+
 }

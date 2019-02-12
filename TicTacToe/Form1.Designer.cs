@@ -78,13 +78,18 @@
             this.playerOscore = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.OptionPanel = new System.Windows.Forms.Panel();
+            this.resetGame = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.language = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.LanguagePanel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.OptionPanel.SuspendLayout();
+            this.LanguagePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // box1
@@ -571,12 +576,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(358, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 30);
+            this.label1.Size = new System.Drawing.Size(172, 32);
             this.label1.TabIndex = 50;
-            this.label1.Text = "Aktualny gracz: ";
+            this.label1.Text = "Current player:";
             // 
             // DisplayPlayers
             // 
@@ -600,7 +605,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 32);
             this.label3.TabIndex = 53;
-            this.label3.Text = "Gracz O";
+            this.label3.Text = "Player O";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // playerXscore
@@ -639,22 +644,35 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 32);
             this.label2.TabIndex = 56;
-            this.label2.Text = "Gracz X";
+            this.label2.Text = "Player X";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // OptionPanel
             // 
             this.OptionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
             this.OptionPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.OptionPanel.Controls.Add(this.button1);
+            this.OptionPanel.Controls.Add(this.resetGame);
             this.OptionPanel.Controls.Add(this.button3);
-            this.OptionPanel.Controls.Add(this.button2);
+            this.OptionPanel.Controls.Add(this.language);
             this.OptionPanel.Location = new System.Drawing.Point(200, 214);
             this.OptionPanel.Name = "OptionPanel";
             this.OptionPanel.Size = new System.Drawing.Size(0, 180);
             this.OptionPanel.TabIndex = 3;
             this.OptionPanel.Click += new System.EventHandler(this.Options);
             this.OptionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.OptionPanel_Paint);
+            // 
+            // resetGame
+            // 
+            this.resetGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetGame.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.resetGame.ForeColor = System.Drawing.Color.White;
+            this.resetGame.Location = new System.Drawing.Point(-2, -2);
+            this.resetGame.Name = "resetGame";
+            this.resetGame.Size = new System.Drawing.Size(200, 60);
+            this.resetGame.TabIndex = 6;
+            this.resetGame.Text = "Reset Game";
+            this.resetGame.UseVisualStyleBackColor = true;
+            this.resetGame.Click += new System.EventHandler(this.resetGame_Click);
             // 
             // button3
             // 
@@ -665,37 +683,70 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 60);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Options";
+            this.button3.Text = "Info";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // language
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-2, 58);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 60);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Options";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(-2, -2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 60);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Options";
-            this.button1.UseVisualStyleBackColor = true;
+            this.language.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.language.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.language.ForeColor = System.Drawing.Color.White;
+            this.language.Location = new System.Drawing.Point(-2, 58);
+            this.language.Name = "language";
+            this.language.Size = new System.Drawing.Size(200, 60);
+            this.language.TabIndex = 4;
+            this.language.Text = "Language";
+            this.language.UseVisualStyleBackColor = true;
+            this.language.Click += new System.EventHandler(this.language_Click);
             // 
             // timer1
             // 
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // LanguagePanel
+            // 
+            this.LanguagePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
+            this.LanguagePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LanguagePanel.Controls.Add(this.button2);
+            this.LanguagePanel.Controls.Add(this.button1);
+            this.LanguagePanel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LanguagePanel.Location = new System.Drawing.Point(400, 274);
+            this.LanguagePanel.Name = "LanguagePanel";
+            this.LanguagePanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LanguagePanel.Size = new System.Drawing.Size(0, 60);
+            this.LanguagePanel.TabIndex = 7;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(-2, 28);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 30);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "English";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(-2, -2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 30);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Polish";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 20;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
@@ -703,6 +754,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(58)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(743, 521);
+            this.Controls.Add(this.LanguagePanel);
             this.Controls.Add(this.OptionPanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.playerOscore);
@@ -756,6 +808,7 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.OptionPanel.ResumeLayout(false);
+            this.LanguagePanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -812,10 +865,14 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel OptionPanel;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button language;
         private System.Windows.Forms.Button Option;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button resetGame;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel LanguagePanel;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
