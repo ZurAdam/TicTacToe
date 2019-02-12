@@ -78,14 +78,13 @@ namespace TicTacToe
                         MessageBox.Show("Wygrana gracza X");
                         playerX++;
                         playerXscore.Text = playerX.ToString();
-                        DisplayPlayers.Text = "O";
+
                     }
                     else
                     {
                         MessageBox.Show("Wygrana gracza O");
                         playerO++;
                         playerOscore.Text = playerO.ToString();
-                        DisplayPlayers.Text = "X";
                     }
                     DisableBox();
 
