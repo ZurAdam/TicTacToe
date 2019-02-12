@@ -87,7 +87,6 @@
             this.box1.Name = "box1";
             this.box1.Size = new System.Drawing.Size(75, 75);
             this.box1.TabIndex = 0;
-            this.box1.UseCompatibleTextRendering = true;
             this.box1.UseVisualStyleBackColor = false;
             this.box1.Click += new System.EventHandler(this.buttonClick);
             // 
