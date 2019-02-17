@@ -3,6 +3,7 @@
 **Autorzy projektu:** Krzysztof Wcisło, Adam Żur
 
 **Wyższa Szkoła Ekonomii i Informatyki**
+
 **Projekt semestralny - programowanie obiektowe w C#**
 
 **Popularna gra w kółko/krzyzyk na wiekszej tablicy 5x5**
