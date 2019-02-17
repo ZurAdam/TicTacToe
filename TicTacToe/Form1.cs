@@ -26,6 +26,9 @@ namespace TicTacToe
         bool isMenu1PanelOpen = false;
         bool isMenu2PanelOpen = false;
 
+        int x, y;
+        bool mouseDown = false;
+
         #region 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -447,6 +450,28 @@ namespace TicTacToe
             button3.Text = "Info";
             button2.Text = "English";
             button1.Text = "Polish";
+        }
+
+
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            x = e.X;
+            y = e.Y;
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (!mouseDown)
+                return;
+            Form formatka = ((Form)sender);
+            formatka.SetDesktopLocation(formatka.DesktopLocation.X - (x - e.X), formatka.DesktopLocation.Y - (y - e.Y));
         }
     }
 
