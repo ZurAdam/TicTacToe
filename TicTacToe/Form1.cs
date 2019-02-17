@@ -29,28 +29,6 @@ namespace TicTacToe
         int x, y;
         bool mouseDown = false;
 
-        #region 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void DisplayPlayers_Click(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
-
         private void buttonClick(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -106,7 +84,8 @@ namespace TicTacToe
                     return false;
             }
 
-            
+            #region checkWinner()
+        
             bool checkWinner()  // instrujce warunkowe sprawdzające wygraną, aby wygrać należy posiadac 4 boxy takiego samego tekstu ( X lub O ) oraz muszą znajdowac sie w jednej lini (pionowo, poziono lub na skos) 
             {
                 //poziom
@@ -257,8 +236,10 @@ namespace TicTacToe
                 else
                     return false;
 
-            } // instrujce warunkowe sprawdzające wygraną, aby wygrać należy posiadac 4 boxy takiego samego tekstu ( X lub O ) oraz muszą znajdowac sie w jednej lini (pionowo, poziono lub na skos) 
-            
+            }
+            #endregion
+            // instrujce warunkowe sprawdzające wygraną, aby wygrać należy posiadac 4 boxy takiego samego tekstu ( X lub O ) oraz muszą znajdowac sie w jednej lini (pionowo, poziono lub na skos) 
+
 
         }
 
@@ -269,11 +250,6 @@ namespace TicTacToe
             EnableBox();
             turns = 0;
             //update
-        }
-
-        private void Options(object sender, EventArgs e)
-        {
-            //Button opcje
         }
 
         private void Exit(object sender, EventArgs e)

@@ -403,7 +403,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 521);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Option
             // 
@@ -474,7 +473,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(357, 5);
             this.panel5.TabIndex = 42;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel14
             // 
@@ -593,7 +591,6 @@
             this.DisplayPlayers.TabIndex = 51;
             this.DisplayPlayers.Text = "X";
             this.DisplayPlayers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.DisplayPlayers.Click += new System.EventHandler(this.DisplayPlayers_Click);
             // 
             // label3
             // 
@@ -658,8 +655,6 @@
             this.OptionPanel.Name = "OptionPanel";
             this.OptionPanel.Size = new System.Drawing.Size(0, 180);
             this.OptionPanel.TabIndex = 3;
-            this.OptionPanel.Click += new System.EventHandler(this.Options);
-            this.OptionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.OptionPanel_Paint);
             // 
             // resetGame
             // 
@@ -805,7 +800,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
