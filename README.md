@@ -21,7 +21,7 @@ swoją runde jako pierwszy.
 * przycisk Nowa Gra(New Game) rozpoczyna nową rundę,
 * przycisk Exit(Wyjscie) konczy i zamyka naszą grę.
 
-#Techniki stosowane:
+# Techniki stosowane:
 
 * C#
 * Windows Form
