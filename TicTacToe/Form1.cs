@@ -365,7 +365,13 @@ namespace TicTacToe
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Info
+            MessageBox.Show("Gra Kółko i Krzyżyk  jest grą strategiczną, rozgrywaną przez dwóch graczy, " +
+                "najczęściej na kartce papieru, w tym przypadku na komputerze. " +
+                "W standardowej wersji 3x3 gracze zajmują pola na przemian dążąc do objęcia trzech pól w jednej linii" +
+                "(pionowo, poziomo lub na skos) przy jednoczesnym uniemożliwieniu tego samego swojemu przeciwnikowi. " +
+                "Pole raz zajęte, nie może zmienić swojego właściciela aż do zakończenia gry. W poniższym przypadku " +
+                "rozpatrywaniu poddana zostanie wersja gry z polem 5x5, kiedy to wygrana następuje po objęciu czterech pól w jednej linii.  " +
+                "\n\nPraca wykonana przez Adam Żur & Krzysztof Wcisło. 2019"); //Info
         }
 
 
