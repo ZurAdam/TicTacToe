@@ -25,3 +25,4 @@ swoją runde jako pierwszy.
 
 * C#
 * Windows Form
+* Visual Studio Installer
